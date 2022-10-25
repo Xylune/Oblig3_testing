@@ -25,10 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: install maven
+      - name: install dependencies
         run: |
           mvn install
           
       - name: run tests
         run: |
-          IsLeapYearTest
+          mvn test
